@@ -8,13 +8,15 @@ function RecipeCreate({ createRecipe }) {
     ingredients: "",
     preparation: "",
   };
-    
+  
   const [recipeData, setRecipeData] = useState({...initialRecipeData});
 
   const handleChange = ({ target }) => {
+    const value = target.type === "checkbox" ? target.checked : target.value;
+
     setRecipeData({
       ...recipeData,
-      [target.name]: target.value,
+      [target.name]: value,
     });
   };
 
@@ -34,19 +36,19 @@ function RecipeCreate({ createRecipe }) {
         <tbody>
           <tr>
             <td>
-              <input id="name" type="text" name="name" placeholder="Name" onChange={handleChange} value={initialRecipeData.name}/>
+              <input id="name" type="text" name="name" placeholder="Name" onChange={handleChange} value={recipeData.name} required/>
             </td>
             <td>
-              <input id="cuisine" type="text" name="cuisine" placeholder="Cuisine" onChange={handleChange} value={initialRecipeData.cuisine}/>
+              <input id="cuisine" type="text" name="cuisine" placeholder="Cuisine" onChange={handleChange} value={recipeData.cuisine} required/>
             </td>
             <td>
-              <input id="photo" type="url" name="photo" placeholder="URL" onChange={handleChange} value={initialRecipeData.photo}/>
+              <input id="photo" type="url" name="photo" placeholder="URL" onChange={handleChange} value={recipeData.photo} required/>
             </td>
             <td>
-              <textarea id="ingredients" name="ingredients" placeholder="Ingredients" onChange={handleChange} value={initialRecipeData.ingredients} />
+              <textarea id="ingredients" name="ingredients" placeholder="Ingredients" onChange={handleChange} value={recipeData.ingredients} required/>
             </td>
             <td>
-              <textarea id="preparation" name="preparation" placeholder="Preparation" onChange={handleChange} value={initialRecipeData.preparation} />
+              <textarea id="preparation" name="preparation" placeholder="Preparation" onChange={handleChange} value={recipeData.preparation} required/>
             </td>
             <td>
               <button type="submit">Create</button>

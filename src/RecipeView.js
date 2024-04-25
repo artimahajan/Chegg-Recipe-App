@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function RecipeView ({ recipe, deleteRecipe }){
     return (
         <tr>
