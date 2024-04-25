@@ -60,8 +60,6 @@ table {
 }
 
 /* Column Size for thead */
-
-
 /* Column size for tbody */
 th:nth-child(1), td:nth-child(1) {
   width: 10%;
@@ -82,11 +80,6 @@ th:nth-child(5), td:nth-child(5) {
 
 tr:nth-child(odd) {
   background-color: #fff0c7;
-}
-
-.content_td p {
-  max-height: 100px; /* Adjust as needed */
-  overflow-y: auto;
 }
 
 img {
