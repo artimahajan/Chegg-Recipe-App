@@ -1,6 +1,5 @@
 import React from "react";
 import RecipeView from "./RecipeView";
-import "./RecipeList.css"
 
 function RecipeList({recipes, deleteRecipe}) {
   

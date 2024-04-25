@@ -14,7 +14,7 @@ header {
 }
 
 h1 {
-  font-family: 'serif';
+  font-family: 'Playfair Display SC';
   text-align: center;
   font-size: 64px;
 }
@@ -63,3 +63,34 @@ table {
 
 
 /* Column size for tbody */
+th:nth-child(1), td:nth-child(1) {
+  width: 10%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+  width: 10%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+  width: 10%;
+}
+
+th:nth-child(4), td:nth-child(4),
+th:nth-child(5), td:nth-child(5) {
+  width: 30%;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff0c7;
+}
+
+.content_td p {
+  max-height: 100px; /* Adjust as needed */
+  overflow-y: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+}
